@@ -2,10 +2,28 @@
     box-sizing: border-box;
 }
 
-h1 {
-    color: red;
+.row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 98vh;
 }
 
-h2 {
-    color: blue;
+.title {
+    background-image: url(img/codioful-formerly-gradienta-m_7p45JfXQo-unsplash.jpg);
+    background-size: cover;
+}
+
+.title.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.signup.column {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
 }
