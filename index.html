@@ -18,31 +18,50 @@
                 <div class="text">
                     <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
                         Sign up <em>now</em> to get started.</h2>
-                    <br>
                     <h2>You <em>know</em> you want to.</h2>
                 </div>
                 <div id="entry">
                     <h2>Let's do this!</h2>
                     <form action="" method="post">
-                            <label for="first_name"></label>
-                                <input type="text" name="first_name" id="first_name" maxlength="16" required>
-                            <label for="last_name"></label>
-                                <input type="text" name="last_name" id="last_name" maxlength="16" required>
-                            <label for="email_address"></label>
-                                <input type="email" name="email_address" id="email_address" required>
-                            <label for="phone_number"></label>
-                                <input type="text" name="phone_number" id="phone_number">
-                            <label for="pwd"></label>
-                                <input type="password" minlength="6" maxlength="16" required>
-                            <label for="pwd"></label>
-                                <input type="password" minlength="6" maxlength="16" required>
-                        </div>
-                            <button type="submit">Create Account</button>
-                    </form>
-                    <div class="account">
-                        Already have an account? <a href="">Log in</a>
-                    </div>
+                            <div id="column-left">
+                                <div id="fname">
+                                    <label for="first_name">FIRST NAME</label>
+                                        <input type="text" name="first_name" id="first_name" maxlength="16" required>
+                                </div>
+                                <div id="lname">
+                                    <label for="last_name">LAST NAME</label>
+                                        <input type="text" name="last_name" id="last_name" maxlength="16" required>
+                                </div>
+                                <div id="email">
+                                    <label for="email_address">EMAIL</label>
+                                        <input type="email" name="email_address" id="email_address" required>
+                                </div>
+                            </div>
+                            <div id="column-right">
+                                <div id="phone">
+                                    <label for="phone_number">PHONE</label>
+                                        <input type="text" name="phone_number" id="phone_number">
+                                </div>
+                                <div id="pwd">
+                                    <label for="pwd">PASSWORD</label>
+                                        <input type="password" minlength="6" maxlength="16" required>
+                                </div>
+                                <div id="confirm_pwd">
+                                    <label for="confirm_pwd">CONFIRM PASSWORD</label>
+                                        <input type="password" minlength="6" maxlength="16" required>
+                                </div>
+                            </div>
                 </div>
+                
+                <div id="submit-user-info">
+                    <button type="submit">
+                        Create Account
+                    </button>
+                </div>
+            </form>
+            <div id="account">
+                Already have an account? <a href="">Log in</a>
+            </div>
         </div>
    </div>
 </body>

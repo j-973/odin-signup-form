@@ -6,11 +6,35 @@
 body {
     margin: 0;
     font-family: 'Patua One', cursive;
+    background-color: #fbfbfb;
+}
+
+form {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
 }
 
 .row {
     display: flex;
     height: 100vh;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 58%;
+    margin-top: 125px
 }
 
 .title.column {
@@ -27,6 +51,7 @@ body {
     display: flex;
     flex-direction: column;
     flex: 2;
+    margin: 50px;
 }
 
 .title > h1 {
@@ -37,7 +62,15 @@ body {
     text-align: center;
 }
 
+
 .title > p, p > a{
     font-size: 1rem;
     color: rgba(255, 255, 255, 1); 
+}
+
+#entry {
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px #cccccc;
+    padding: 50px;
+    margin: 0 -50px;
 }
