@@ -23,16 +23,21 @@ body {
     align-items: center;
 }
 
-.title > h1 {
-    font-size: 4rem;
-}
-
-.title > p {
-    font-size: 1rem;
-}
-
 .signup.column {
     display: flex;
     flex-direction: column;
     flex: 2;
+}
+
+.title > h1 {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+}
+
+.title > p, p > a{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 1); 
 }
