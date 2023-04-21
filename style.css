@@ -32,13 +32,24 @@ input {
     border: 2px solid #E5E7EB;
     border-radius: 5px;
 }
+    input:focus {
+        outline: none; 
+        border: 1px solid #4D90FE;
+        box-shadow: 1px 1px 5px #888888;
+    }
 
-input:focus {
-    outline: none; 
-    border: 1px solid #4D90FE;
+button {
+    font-family: 'Patua One', cursive;
+    font-size: 1rem;
+    padding: 10px 40px;
+    margin: 30px 0px;
+    border: none;
+    border-radius: 5px;
     box-shadow: 1px 1px 5px #888888;
+    background-color: #b40ac8;
+    color: #ffffff;
+    cursor: pointer;
 }
-
 
 .row {
     display: flex;
@@ -86,7 +97,7 @@ input:focus {
 #entry {
     background-color: #ffffff;
     box-shadow: 0px 5px 10px #cccccc;
-    padding: 40px;
+    padding: 0px 40px;
     margin: 0 -40px;
 }
 
@@ -95,5 +106,5 @@ input:focus {
 }
 
 #column-left, #column-right {
-    flex-basis: 30%;
+    flex-basis: 25%;
 }
