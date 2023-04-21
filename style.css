@@ -15,15 +15,30 @@ form {
     flex-wrap: wrap;
 }
 
-form > div {
+form > div > div {
     display: flex;
     flex-direction: column;
+    padding: 15px 0px;
+    margin: inherit;
 }
 
 label {
     font-size: 0.8rem;
     letter-spacing: 1.5px;
 }
+
+input {
+    height: 2rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none; 
+    border: 1px solid #4D90FE;
+    box-shadow: 1px 1px 5px #888888;
+}
+
 
 .row {
     display: flex;
@@ -51,7 +66,7 @@ label {
     display: flex;
     flex-direction: column;
     flex: 2;
-    margin: 50px;
+    margin: 40px;
 }
 
 .title > h1 {
@@ -71,6 +86,14 @@ label {
 #entry {
     background-color: #ffffff;
     box-shadow: 0px 5px 10px #cccccc;
-    padding: 50px;
-    margin: 0 -50px;
+    padding: 40px;
+    margin: 0 -40px;
+}
+
+#column-left {
+    margin-right: 40px;
+}
+
+#column-left, #column-right {
+    flex-basis: 30%;
 }
