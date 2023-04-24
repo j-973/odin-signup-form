@@ -51,6 +51,14 @@ button {
     cursor: pointer;
 }
 
+h1 > a {
+    color: #ffffff;
+}
+
+div > a, h1 > a {
+    text-decoration: none;
+}
+
 .row {
     display: flex;
     height: 100vh;
@@ -59,7 +67,7 @@ button {
 .text {
     display: flex;
     flex-direction: column;
-    width: 58%;
+    width: 50%;
     margin: 40px 0px;
 }
 
@@ -91,11 +99,6 @@ button {
     height: 9rem;
     text-align: center;
 }
-
-div > a {
-    text-decoration: none;
-}
-
 
 .title > p, p > a{
     font-size: 1rem;
