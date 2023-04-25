@@ -20,6 +20,11 @@
                         Sign up <em>now</em> to get started.</h2>
                     <h2>You <em>know</em> you want to.</h2>
                 </div>
+                <!-- The password pattern regular expression checks if a password has:
+                    At least one lowercase letter, one uppercase letter, one digit `\d`, one special character from these characters: !@#$%^&*, and is between 8-16 characters long.
+                    Each of these conditions are checked with the syntax for "positive lookaheads" (?= ), which scan string for specific patterns
+                    The `.*` in the lookaheads means that any characters (.) can appear before (*) the specific character group you are looking ahead for -->
+
                 <div id="entry">
                     <h2>Let's do this!</h2>
                     <form action="" method="post">
@@ -34,7 +39,7 @@
                                 </div>
                                 <div id="pwd">
                                     <label for="pwd">PASSWORD</label>
-                                        <input type="password" minlength="6" maxlength="16" required tabindex="5">
+                                        <input type="password" id="pwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,16}$" required tabindex="5">
                             </div>
                             </div>
                             <div id="column-right">
@@ -48,12 +53,13 @@
                                 </div>
                                 <div id="confirm_pwd">
                                     <label for="confirm_pwd">CONFIRM PASSWORD</label>
-                                        <input type="password" minlength="6" maxlength="16" required tabindex="6">
+                                        <input type="password" id="confirm_pwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,16}$" required tabindex="6">
                                 </div>
                             </div>
+                        <p id="msgpassword">*Passwords must be between 8-16 characters, and contain at least one lowercase letter, one uppercase letter, one digit, and one special character (!@#$%^&*).</p>
                 </div>
-                <div id="submit-user-info">
-                    <button type="submit" tabindex="7">
+                <div>
+                    <button type="submit" id="submit-user-info" tabindex="7">
                         Create Account
                     </button>
                 </div>
