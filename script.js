@@ -5,10 +5,14 @@ const FORM = document.getElementById("new_user"),
     MSG_INVALID = document.getElementById("msg_invalid"),
     BTN_SUBMIT = document.getElementById("submit_new_user");
 
-    //If the password and confirm password both meet the regex requirments, submit the form and keep the invalid message blank, otherwise prevent form submission with preventDefault(), add the .error css rules to password inputs, and show error message
+    //If the password and confirm password both meet the regex requirments, and also match each other, submit the form and keep the invalid message blank, otherwise prevent form submission with preventDefault(), add the .error css rules to password inputs, and show error message
     validatePwd = (ev) => {
-        if (PWD_REQS.test(PWD.value) && PWD_REQS.test(CONFIRM_PWD.value)) {
+        if (PWD_REQS.test(PWD.value) && PWD_REQS.test(CONFIRM_PWD.value) && (PWD.value === CONFIRM_PWD.value)) {
             MSG_INVALID.textContent = ``;
+            if (PWD.classList.contains(`error`) || CONFIRM_PWD.classList.contains(`error`)) {
+                PWD.classList.remove(`error`);
+                CONFIRM_PWD.classList.remove(`error`);
+            }
             return true; 
         }
         else {
