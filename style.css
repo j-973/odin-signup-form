@@ -71,6 +71,11 @@ div > a, h1 > a {
     margin: 40px 0px;
 }
 
+input.green {
+    outline: none; 
+    border: 1px solid #0BDA51;
+}
+
 input.error {
     outline: none; 
     border: 1px solid #D22B2B;

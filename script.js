@@ -5,7 +5,9 @@ const FORM = document.getElementById("new_user"),
     MSG_INVALID = document.getElementById("msg_invalid"),
     BTN_SUBMIT = document.getElementById("submit_new_user");
 
-    //If the password and confirm password both meet the regex requirments, and also match each other, submit the form and keep the invalid message blank, otherwise prevent form submission with preventDefault(), add the .error css rules to password inputs, and show error message
+    //if the password entered matches the regex pattern, and the password and confirm password inputs match, return true.
+    //error class for invalid passwords turns the password boxes red
+    //green class is for valid passwords, turns valid, matching passwords green
     validatePwd = (ev) => {
         if (PWD_REQS.test(PWD.value) && PWD_REQS.test(CONFIRM_PWD.value) && (PWD.value === CONFIRM_PWD.value)) {
             MSG_INVALID.textContent = ``;
@@ -13,10 +15,18 @@ const FORM = document.getElementById("new_user"),
                 PWD.classList.remove(`error`);
                 CONFIRM_PWD.classList.remove(`error`);
             }
+            if (!PWD.classList.contains(`green`) || !CONFIRM_PWD.classList.contains(`green`)) {
+                PWD.classList.add(`green`);
+                CONFIRM_PWD.classList.add(`green`);
             return true; 
         }
+    }
         else {
             ev.preventDefault();
+            if (PWD.classList.contains(`green`) || CONFIRM_PWD.classList.contains(`green`)) {
+                PWD.classList.remove(`green`);
+                CONFIRM_PWD.classList.remove(`green`);
+            }
             if (!PWD.classList.contains(`error`) || !CONFIRM_PWD.classList.contains(`error`)) {
                 PWD.classList.add(`error`);
                 CONFIRM_PWD.classList.add(`error`);
@@ -28,10 +38,8 @@ const FORM = document.getElementById("new_user"),
     }
 
     resetForm = (ev) => {
-        if (PWD.classList.contains(`error`) || CONFIRM_PWD.classList.contains(`error`)) {
-            PWD.classList.remove(`error`);
-            CONFIRM_PWD.classList.remove(`error`);
-        }
+        PWD.className = '';
+        CONFIRM_PWD.className = '';
         PWD.value = ``;
         CONFIRM_PWD.value = ``;
         MSG_INVALID.textContent = ``;
