@@ -71,6 +71,11 @@ div > a, h1 > a {
     margin: 40px 0px;
 }
 
+input.error {
+    outline: none; 
+    border: 1px solid #D22B2B;
+}
+
 .title.column {
     display: flex;
     flex-direction: column;

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>- 🌻 Flowerr Sign-up -</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
 
                 <div id="entry">
                     <h2>Let's do this!</h2>
-                    <form action="" method="post">
+                    <form action="" method="post" id="new_user">
                             <div id="column-left">
                                 <div id="fname">
                                     <label for="first_name">FIRST NAME</label>
@@ -37,9 +38,9 @@
                                     <label for="email_address">EMAIL</label>
                                         <input type="email" name="email_address" id="email_address" required tabindex="3">
                                 </div>
-                                <div id="pwd">
+                                <div>
                                     <label for="pwd">PASSWORD</label>
-                                        <input type="password" id="pwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,16}$" required tabindex="5">
+                                        <input type="password" id="pwd" class="" required tabindex="5">
                             </div>
                             </div>
                             <div id="column-right">
@@ -51,15 +52,15 @@
                                     <label for="phone_number">PHONE NUMBER</label>
                                         <input type="text" name="phone_number" id="phone_number" pattern="^(\(\d{3}\)|\d{3})-\d{3}-\d{4}$" placeholder="(123)-456-7890 or 123-456-7890" tabindex="4">
                                 </div>
-                                <div id="confirm_pwd">
+                                <div>
                                     <label for="confirm_pwd">CONFIRM PASSWORD</label>
-                                        <input type="password" id="confirm_pwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,16}$" required tabindex="6">
+                                        <input type="password" id="confirm_pwd" class="" required tabindex="6">
                                 </div>
                             </div>
-                        <p id="msgpassword">*Passwords must be between 8-16 characters, and contain at least one lowercase letter, one uppercase letter, one digit, and one special character (!@#$%^&*).</p>
+                        <p id="msg_invalid"></p>
                 </div>
                 <div>
-                    <button type="submit" id="submit-user-info" tabindex="7">
+                    <button type="submit" id="submit_new_user" tabindex="7">
                         Create Account
                     </button>
                 </div>
